@@ -1,34 +1,207 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<a name="readme-top"></a>
 
-## Getting Started
 
-First, run the development server:
+  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
+  <img src="./public/profile.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+  <h3><b>Digital Agency App</b></h3>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Digital Agency App ](#-digital-agency-app-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Digital Agency App <a name="about-project"></a>
+
+
+**Digital Agency App** graphical interface within a software application that centralizes and displays relevant information and tools tailored to a user's specific needs and activities.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+
+<details>
+  <summary>Front-end</summary>
+  <ul>
+    <li>React Next Js </li>
+  </ul>
+</details>
+
+
+<!-- Features -->
+
+### Key Features <a name="key-features"></a>
+
+- **Enable the creation, editing, and storage of various content types (e.g., blogs, images, videos).**
+- **Offer design tools for creating website layouts, graphics, and other digital assets.**
+- **Integrate with content management systems (CMS) and provide previews to help clients visualize the final product.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+- [Live Demo Link](#)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need:
+
+<!--
+Example command:
+
+```sh
+ gem install rails
+```
+ -->
+ <ul>
+    <li>Installation of Git</li>
+    <li>Installation of NPM</li>
+    <li>A working browser</li>
+    <li> Next Js</li>
+    <li>Internet connection</li>
+    <li>A code editor like Visual Studio Code</li>
+  </ul>
+
+### Setup
+
+Clone this repository to your desired folder:
+
+
+```sh
+  cd my-folder
+ (https://github.com/bdshakhawat/digital-agency-app)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Install
 
-You can start editing the page by modifying `app/page.jsx`. The page auto-updates as you edit the file.
+Install this project with:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<ul>
+  <li>npm install</li>
+  <li>Node</li>
+  <li>Linters (follow this link's instruction <a href="https://github.com/microverseinc/linters-config">install linter</a>)</li>
+</ul>
 
-## Learn More
+### Usage
 
-To learn more about Next.js, take a look at the following resources:
+To run the project, use  ```npm run dev``` command.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<!--
+Example command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```sh
+  rails server
+```
+--->
 
-## Deploy on Vercel
+### Run tests
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Test case will be added soon.
+<!--
+Example command:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```sh
+  bin/rails test test/models/article_test.rb
+```
+--->
+
+### Deployment
+
+Create an account in netlify and deploy from github repo
+<!--
+Example:
+
+```sh
+
+```
+ -->
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+
+👤 **Author1**
+
+- GitHub: [@bdshakhawat](https://github.com/bdshakhawat)
+- Twitter: [@bdshakwat](https://twitter.com/bdshakwat)
+- LinkedIn: [shakawat-hossain](https://www.linkedin.com/in/shakawat-hossain)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- **project showcase section**
+- **client's feedback**
+- **contact section**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please send a welcome message on Twitter and let's have a chat to share coding knowledge.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank my wife, who always inspires me to be a better software engineer. Also thanks to Microverse for awesome support.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
