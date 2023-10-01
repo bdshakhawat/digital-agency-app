@@ -1145,10 +1145,6 @@ video {
     margin-right: auto;
   }
 
-  .lg\:-ml-5 {
-    margin-left: -1.25rem;
-  }
-
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1159,10 +1155,6 @@ video {
 
   .lg\:mb-2 {
     margin-bottom: 0.5rem;
-  }
-
-  .lg\:ml-5 {
-    margin-left: 1.25rem;
   }
 
   .lg\:mr-3 {
