@@ -1,4 +1,4 @@
-// File: E:\Ostad\module-16\Digital-agency\Digital-Agency\src\app\page.jsx
+// File: E:\Ostad\module-16\Digital-agency\digital-agency-app\src\app\page.jsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
