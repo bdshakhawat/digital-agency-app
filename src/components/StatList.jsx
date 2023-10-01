@@ -1,5 +1,5 @@
 async function getData(){
-  const res=await fetch(process.env.BASE_URL+"api/StatList");
+  const res=await fetch("https://agency.teamrabbil.com/api/StatList");
   if(!res.ok){
       throw new Error("StatList Calling Fail");
   }
