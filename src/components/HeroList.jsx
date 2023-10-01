@@ -1,7 +1,21 @@
-import Link from "next/link";
-import React from "react";
+async function getData() {
+  try {
+    const response = await fetch("https://agency.teamrabbil.com/api/HeroList");
+    if (!response.ok) {
+      throw new Error("All project calling failed");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
 
-export default function HeroList() {
+
+const  HeroList =async()=> {
+  const data = await getData();
+  console.log(data);
   return (
     <section>
       <div className="relative pt-12 lg:pt-20 pb-20 z-10">
@@ -37,32 +51,69 @@ export default function HeroList() {
                 </div>
               </div>
             </div>
-            <div className="w-full lg:w-1/2 px-4">
-              <div className="flex flex-wrap lg:mb-4 lg:ml-6">
-                <img
-                  className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
-                  src="https://images.unsplash.com/photo-1557804483-ef3ae78eca57?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=941&q=80"
-                  alt=""
-                />
-                <img
-                  className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
-                  src="https://images.unsplash.com/photo-1559136560-16ad036d85d3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80"
-                  alt=""
-                />
+            <div className="flex flex-wrap w-1/2 lg:w-1/2 ">
+               {/* <div className=" lg:mb-2 w-full  lg:w-1/2 px-3"> */}
+                    <img
+                        className="w-1/2 h-32 lg:h-48 object-cover rounded lg:mb-2 "
+                        src={data.image1}
+                        
+                        
+                      />
+                      <img
+                        className="w-1/2 h-32 lg:h-48 object-cover rounded px-3 "
+                        src={data.image2}
+                        
+                      />
+                      <img
+                        className="w-1/2 h-32 lg:h-48 object-cover rounded "
+                        src={data.image3}
+                    
+                    
+                      />
+                    <img
+                        className="w-1/2 h-32 lg:h-48 object-cover rounded px-3"
+                        src={data.image4}
+                    
+                    />
+                  {/* </div> */}
               </div>
-              <div className="flex flex-wrap lg:mb-4 lg:mr-6">
-                <img
-                  className="w-full md:w-1/2 lg:w-2/3 h-64 p-2 object-cover rounded-4xl lg:rounded-br-none"
-                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=967&q=80"
-                  alt=""
-                />
-                <img
-                  className="w-full md:w-1/2 lg:w-1/3 h-64 p-2 object-cover rounded-4xl lg:rounded-bl-none"
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1190&q=80"
-                  alt=""
-                />
+
+
+            {/* <div className="w-full lg:w-1/2 px-4 flex items-center">
+              <div className="w-full">
+                <div className="relative max-w-md mx-auto lg:mx-0">
+                  <img
+                    className="mx-auto"
+                    src={data.image1}
+                    
+                    
+                  />
+                  <img
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    src={data.image2}
+                    
+                  />
+
+                </div>
+                <div className="relative max-w-md mx-auto lg:mx-0">
+                  <img
+                    className="mx-auto"
+                    src={data.image3}
+                    
+                    
+                  />
+                  <img
+                    className="absolute inset-0 w-full h-full object-cover object-center"
+                    src={data.image4}
+                    
+                  />
+
+                </div>
+                
               </div>
-            </div>
+              
+ 
+            </div> */}
           </div>
         </div>
       </div>
@@ -147,7 +198,7 @@ export default function HeroList() {
           <div className="mt-auto">
             <div className="pt-6">
               <a
-                className="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-l-xl rounded-t-xl"
+                className="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-l-xl rounded-t-xl"
                 href="#"
               >
                 Sign In
@@ -179,3 +230,4 @@ export default function HeroList() {
     </section>
   );
 }
+export default HeroList;

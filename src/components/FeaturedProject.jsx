@@ -1,12 +1,26 @@
-import React from "react";
+async function getData() {
+  try {
+    const response = await fetch('https://agency.teamrabbil.com/api/FeaturedProject');
+    if (!response.ok) {
+      throw new Error('All project calling failed');
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error);
+    return [];
+  }
+}
 
-const FeaturedProject = () => {
+const FeaturedProject = async () => {
+  const data = await getData();
   return (
     <>
       <section>
         <div className="py-20 bg-gray-50 radius-for-skewed">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap items-center -mx-4">
+
               <div className="mb-12 lg:mb-0 w-full lg:w-1/2 flex px-4">
                 <div className="max-w-md">
                   <span className="text-green-600 font-bold">
@@ -28,39 +42,19 @@ const FeaturedProject = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full lg:w-1/2">
-                <div className="mb-4 flex flex-wrap items-end">
-                  <div className="mb-4 lg:mb-0 w-full lg:w-2/3 px-3">
-                    <img
-                      className="w-full h-32 lg:h-48 object-cover rounded"
-                      src="https://images.unsplash.com/photo-1604701145653-ab3c97c63467?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                      alt=""
-                    />
-                  </div>
-                  <div className="w-full lg:w-1/3 px-3">
-                    <img
-                      className="w-full h-32 object-cover rounded"
-                      src="https://images.unsplash.com/photo-1521581171443-58a6b508b9ac?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div className="flex flex-wrap items-start">
-                  <div className="mb-4 lg:mb-0 w-full lg:w-1/3 px-3">
-                    <img
-                      className="w-full h-32 object-cover rounded"
-                      src="https://images.unsplash.com/photo-1501706649056-3cb79cccec52?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80"
-                      alt=""
-                    />
-                  </div>
-                  <div className="w-full lg:w-2/3 px-3">
-                    <img
-                      className="w-full h-32 lg:h-48 object-cover rounded"
-                      src="https://images.unsplash.com/photo-1489058535093-8f530d789c3b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
-                      alt=""
-                    />
-                  </div>
-                </div>
+              <div className="flex flex-wrap w-full lg:w-1/2">
+                   {data.map((item, i) => (                
+                      <div className=" lg:mb-2 w-full  lg:w-1/2 px-3">
+                        <img key={i}
+                          className="w-full h-32 lg:h-48 object-cover rounded"
+                          src={item["image"]}
+                          alt=""
+                        />
+                      </div>
+                    ))}
+
+
+
               </div>
             </div>
           </div>
