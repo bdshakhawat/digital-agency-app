@@ -1,3 +1,4 @@
+import Image from "next/image";
 async function getData() {
   try {
     const response = await fetch('https://agency.teamrabbil.com/api/FeaturedProject');
@@ -45,14 +46,17 @@ const FeaturedProject = async () => {
               <div className="flex flex-wrap w-full lg:w-1/2">
                    {data.map((item, i) => (                
                       <div className=" lg:mb-2 w-full  lg:w-1/2 px-3">
+
+           
                         <img key={i}
+                        
                           className="w-full h-32 lg:h-48 object-cover rounded"
                           src={item["image"]}
                           alt=""
                         />
                       </div>
                     ))}
-
+ 
 
 
               </div>

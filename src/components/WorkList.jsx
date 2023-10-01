@@ -1,5 +1,5 @@
 async function getData(){
-  const res=await fetch(process.env.BASE_URL+"api/WorkList");
+  const res=await fetch("https://agency.teamrabbil.com/api/WorkList");
   if(!res.ok){
       throw new Error("WorkList List Calling Fail");
   }
