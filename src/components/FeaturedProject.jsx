@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 async function getData(){
     const res=await fetch("https://agency.teamrabbil.com/api/FeaturedProject");
@@ -39,6 +40,22 @@ const FeaturedProject = async () => {
                         <Link className="hidden md:inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200" href="/projects">View More Projects</Link>
                     </div>
                     <div className="flex flex-wrap -mx-4 mb-4">
+                        {data.map((item) => (
+                          <div key={item.id} className="w-full md:w-1/2 lg:w-1/3 mb-8 px-4">
+                            <a href={item.live} target="_blank" rel="noopener noreferrer">
+                              <Image
+                                src={item.image}
+                                alt=""
+                                width={500}
+                                height={400}
+                                objectFit="cover"
+                                className="rounded"
+                              />
+                            </a>
+                          </div>
+                          ))}
+                     </div>
+                    {/* <div className="flex flex-wrap -mx-4 mb-4">
                         {
                             data.map((item,i)=>{
                                 return(
@@ -50,7 +67,8 @@ const FeaturedProject = async () => {
                                 )
                             })
                         }
-                    </div>
+                        
+                    </div> */}
                     <div className="text-center">
                         <Link className="md:hidden inline-block py-2 px-6 rounded-l-xl rounded-t-xl bg-green-600 hover:bg-green-700 text-gray-50 font-bold leading-loose transition duration-200" href="/projects">
                             View More Projects
